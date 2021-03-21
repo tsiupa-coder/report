@@ -1,0 +1,26 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="ReportV324">
+    <output-path>$PROJECT_DIR$/out/artifacts/ReportV324</output-path>
+    <properties id="ant-preprocessing">
+      <options enabled="true" />
+    </properties>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="sample.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="nativeBundle" value="all" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="ReportV3.jar">
+        <element id="dir-copy" path="$PROJECT_DIR$/resource" />
+        <element id="module-output" name="ReportV3" />
+      </element>
+      <element id="library" level="project" name="sqlite-jdbc-3.34.0" />
+    </root>
+  </artifact>
+</component>

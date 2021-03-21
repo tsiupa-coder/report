@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="REPORT">
+    <output-path>$PROJECT_DIR$/out/artifacts/REPORT</output-path>
+    <root id="root">
+      <element id="dir-copy" path="$PROJECT_DIR$/resource" />
+      <element id="library" level="project" name="sqlite-jdbc-3.34.0" />
+      <element id="module-output" name="ReportV3" />
+    </root>
+  </artifact>
+</component>

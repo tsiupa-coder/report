@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1347.0" style="-fx-background-color: #d3d6ce;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <AnchorPane layoutX="954.0" layoutY="79.0" prefHeight="429.0" prefWidth="383.0" style="-fx-background-color: #dde0d7;">
+         <children>
+            <Button fx:id="DeletButton" layoutX="38.0" layoutY="384.0" mnemonicParsing="false" onAction="#delateOperatation" prefHeight="31.0" prefWidth="125.0" text="Видалити операцію" />
+            <Button fx:id="EditButton" layoutX="223.0" layoutY="384.0" mnemonicParsing="false" onAction="#EditOperation" prefHeight="31.0" prefWidth="125.0" text="Редагувати" />
+         </children>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane layoutY="81.0" prefHeight="400.0" prefWidth="807.0">
+         <children>
+            <TableView fx:id="table_view" layoutX="17.0" layoutY="-5.0" prefHeight="434.0" prefWidth="925.0" style="-fx-background-color: #dde0d7;" AnchorPane.leftAnchor="17.0">
+              <columns>
+                  <TableColumn fx:id="table_Colom_id" prefWidth="165.0" text=" Номер операції" />
+                <TableColumn fx:id="table_Colom_debet" prefWidth="165.0" text="Дебит" />
+                <TableColumn fx:id="table_colom_Credut" minWidth="0.0" prefWidth="164.66668701171875" text="Кредит" />
+                  <TableColumn fx:id="table_colom_sum" prefWidth="159.66665649414062" text="Сума" />
+                  <TableColumn fx:id="table_colom_data" prefWidth="119.0" text="Дата" />
+                  <TableColumn fx:id="Table_colom_note" prefWidth="112.0" text="Нотатки" />
+              </columns>
+               <columnResizePolicy>
+                  <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+               </columnResizePolicy>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="19.0" layoutY="526.0" prefHeight="67.0" prefWidth="1325.0" style="-fx-background-color: #dde0d7;">
+         <children>
+            <TextField fx:id="Credet_field" layoutX="226.0" layoutY="21.0" prefHeight="25.0" prefWidth="198.0" promptText="Кредет" style="-fx-border-radius: 5px;" AnchorPane.leftAnchor="226.0" />
+            <TextField fx:id="Debet_field" layoutX="14.0" layoutY="21.0" prefHeight="25.0" prefWidth="198.0" promptText="Дебет" style="-fx-border-radius: px;" AnchorPane.leftAnchor="14.0" />
+            <TextField fx:id="Sum_field" layoutX="439.0" layoutY="21.0" prefHeight="25.0" prefWidth="198.0" promptText="Сума" style="-fx-border-radius: 5px;" />
+            <TextField fx:id="NoteField" layoutX="872.0" layoutY="21.0" prefHeight="25.0" prefWidth="198.0" promptText="Нотатки" style="-fx-border-radius: 5px;" />
+            <DatePicker fx:id="datafild" layoutX="653.0" layoutY="21.0" prefHeight="25.0" prefWidth="198.0" promptText="ДД/ММ/РРРР" />
+            <Button fx:id="Addbutton" layoutX="1099.0" layoutY="18.0" mnemonicParsing="false" onAction="#press" prefHeight="31.0" prefWidth="198.0" text="Додати операцію" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="457.0" layoutY="6.0" prefHeight="58.0" prefWidth="486.0" style="-fx-background-color: #dde0d7;">
+         <children>
+            <Label layoutX="109.0" layoutY="4.0" onMouseClicked="#fromDbtoTableview" prefHeight="51.0" prefWidth="268.0" text="Журнал Операцій">
+               <font>
+                  <Font name="Serif Regular" size="34.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <GridPane layoutX="963.0" layoutY="79.0" prefHeight="381.0" prefWidth="339.0" AnchorPane.leftAnchor="963.0" AnchorPane.rightAnchor="45.0" AnchorPane.topAnchor="79.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="211.0" minWidth="10.0" prefWidth="119.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="261.0" minWidth="10.0" prefWidth="261.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="74.66665649414062" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="80.0" minHeight="10.0" prefHeight="68.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="74.66665649414062" minHeight="10.0" prefHeight="61.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="92.0" minHeight="7.333343505859375" prefHeight="58.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="195.66665649414062" minHeight="10.0" prefHeight="58.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="268.0" minHeight="10.0" prefHeight="83.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label alignment="CENTER" prefHeight="58.0" prefWidth="237.0" text="Дебит" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="50.0" prefWidth="196.0" text="Кредит" textAlignment="RIGHT" GridPane.rowIndex="2">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="41.0" prefWidth="199.0" text="Сума" GridPane.rowIndex="3">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" prefHeight="45.0" prefWidth="198.0" text="Дата" GridPane.rowIndex="4">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" contentDisplay="TOP" prefHeight="197.0" prefWidth="200.0" text="Нотатки" GridPane.rowIndex="5" />
+            <TextField fx:id="edit_suma" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <TextField fx:id="edit_credet" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="edit_data" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="edit_note" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <TextField fx:id="edit_debet" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label alignment="CENTER" prefHeight="58.0" prefWidth="237.0" text="Номер">
+               <font>
+                  <Font name="Segoe UI" size="12.0" />
+               </font>
+            </Label>
+            <TextField fx:id="edit_id" GridPane.columnIndex="1" />
+         </children>
+      </GridPane>
+      <AnchorPane layoutX="19.0" layoutY="6.0" prefHeight="58.0" prefWidth="426.0" style="-fx-background-color: #dde0d7;">
+         <children>
+            <Button fx:id="search_botton" layoutX="284.0" layoutY="13.0" mnemonicParsing="false" onAction="#findOperationByDate" prefHeight="25.0" prefWidth="115.0" text="Знайти" />
+            <DatePicker fx:id="strart_period" layoutX="14.0" layoutY="13.0" prefHeight="25.0" prefWidth="115.0" promptText="З" />
+            <DatePicker fx:id="end_period" layoutX="142.0" layoutY="13.0" prefHeight="25.0" prefWidth="115.0" promptText="До" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="954.0" layoutY="6.0" prefHeight="58.0" prefWidth="383.0" style="-fx-background-color: #dde0d7 #dde0d7;">
+         <children>
+            <Button layoutX="134.0" layoutY="14.0" mnemonicParsing="false" onAction="#startEnd" prefHeight="31.0" prefWidth="115.0" text="Таблиця" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
